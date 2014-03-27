@@ -5,11 +5,14 @@ min-height:500px;
 opacity: 0.4;
 }
 
+#nav{
+width:31%;
+
+}
+
 
 #Schalke{
 background-image: url('../img/FCSchalke04.jpg');
-
-
 
 
 }
