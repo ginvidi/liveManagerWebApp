@@ -10,10 +10,14 @@ width:31%;
 
 }
 
+.SquadBody{
+float:left;
+width:40%;
+margin:auto;
+}
 
-#Schalke{
+.FCSchalke04{
 background-image: url('../img/FCSchalke04.jpg');
-
 
 }
 
