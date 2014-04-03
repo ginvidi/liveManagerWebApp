@@ -79,13 +79,14 @@ margin: 30px auto;
 
 
 #content div div{
-	width: 80%;
+
 	margin: 2% auto;
 	background: white;
 	border-radius: 5px;
 
 
 }
+
 
 
 #matchResult, #squads{
@@ -99,6 +100,9 @@ background: #fff;
 border-radius: 5px;
 }
 
-
+/*graph*/
+.axis{
+font-size:0.8em;
+}
 
 

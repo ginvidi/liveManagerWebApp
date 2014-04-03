@@ -137,6 +137,8 @@ $.getJSON( "data/actions.json", function( data ) {
 
 /*   +++++++++++++++++++++++++++++++++++++++END Json data +++++++++++++++++++++++++++++++++++++++++++++++++++++   */
 
+/*   ++++++++++++++++++++++++++++++++++++++++replace string +++++++++++++++++++++++++++++++++++++++++++++++++++   */
+
 
 /* +++++++++++++++++++++++++++++++++++++++++++ Drawning in hmtl ++++++++++++++++++++++++++++++++++++++++++++++   */
 setTimeout(function() {
@@ -171,7 +173,7 @@ setTimeout(function() {
 			$('#'+ matchesId +' div ul').append('<li  class = "SquadBody ' + squadclass +'"><h2>'+sqadplayer[0]+'</h2></li>');
 			//$('.'+ squadclass).append('<ul class = "list-group"></ul>')
 			
-			$('.'+ squadclass).append('<div ><h3 ><a href="#content" id="' + playerId + '" onclick="markActiveLink(this);" >'+sqadplayer[1]+'</a></h3></div>');
+			$('.'+ squadclass).append('<div ><h3 ><a href="#content" id="' + playerId + '" onclick="markActiveLink(this);graph(\'' + matches +'\',\'' + player + '\');" >'+sqadplayer[1]+'</a></h3></div>');
 			}
 
 //console.log(Players[matches][player]);
@@ -200,38 +202,13 @@ setTimeout(function() {
 
 }// close setTimeout()
 
-//click function 
-//console.log(playersArray[0]);
-
-	/*	for (element in playersArray){
-			console.log('prova'+playersArray[element]);
-			$('#'+playersArray[element]).click(function() {
-				alert('click'+playersArray[element]);
-				$('#content').html(' <h1 class="goalsNumber">' + Players[matches][player][action].length + '</h1> ')
-
-			});
-
-		}*/
-
 
 $('.matches').append('<div class = "clear"></div>')
 	}, 500);
 	
 
 
-function markActiveLink(el) {   
-   // alert($(el).attr("id"));
-// left div
-	$('#content').append(' <div><h2> '+$('#'+$(el).attr("id")).text()+'\'s game play </h2><div><a href = "#" id="'+$(el).attr("id")+'details">'+ $('#'+$(el).attr("id")).text() +'\'s game details »</a></div>  </div>');
-//minuts goals
-	$('#' + $(el).attr("id") + ' .goalsMinuts').each(function(  ) {
-		$('#content div div').prepend('<p> goals minute: ' +  this.id + ' </p>');
-	});
-//player game details
-	$('#'+$(el).attr("id")+'details').click(function(){
-		//alert(player);
-	});
-}
+
 
 
 
