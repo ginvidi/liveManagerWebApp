@@ -117,8 +117,6 @@ function getPlayesData(data){
 		 $.each(data, function (index, value){
 			console.log(index );
 			var arr = index.split('-');
-				console.log( arr[0] );
-				//return squad =  arr[0];
 			console.log( arr[1] );			
 	
 		});
@@ -171,12 +169,12 @@ setTimeout(function() {
 				}
 			else{
 			$('#'+ matchesId +' div ul').append('<li  class = "SquadBody ' + squadclass +'"><h2>'+sqadplayer[0]+'</h2></li>');
-			//$('.'+ squadclass).append('<ul class = "list-group"></ul>')
+
 			
 			$('.'+ squadclass).append('<div ><h3 ><a href="#content" id="' + playerId + '" onclick="markActiveLink(this,\'' + matches +'\',\'' + player + '\');" >'+sqadplayer[1]+'</a></h3></div>');
 			}
 
-//console.log(Players[matches][player]);
+
 			for (action in Players[matches][player]){
 				if (action === 'goal'){
 					$('.'+ squadclass ).append('<h6  class="goalsNumber" id = "'+ playerDivId +'goals" ">  Goal in match: ' + Players[matches][player][action].length + '</h6 ');
@@ -185,7 +183,7 @@ setTimeout(function() {
 
 				for (element in Players[matches][player][action]){ 
 
-						//alert ( Players[matches][player][action][element]);
+
 						$('.'+ squadclass + ' h3 #'+playerId).append('<div  class = "goalsMinuts" id = "'+Players[matches][player][action][element]+'" > </div>');
 
 						}
@@ -220,7 +218,7 @@ var txt = data;
 	if($('#'+$(el).attr("id")+' .panel-collapse.collapse').is( ".in" )){	
 	
 			  $('#'+$(el).attr("id")+' .panel-collapse.collapse').removeClass("in");
-			  //$('#content').html('<h1>Check matchs result and Players game skill</h1>')
+
 		}
 
 	else{
