@@ -173,7 +173,7 @@ setTimeout(function() {
 			$('#'+ matchesId +' div ul').append('<li  class = "SquadBody ' + squadclass +'"><h2>'+sqadplayer[0]+'</h2></li>');
 			//$('.'+ squadclass).append('<ul class = "list-group"></ul>')
 			
-			$('.'+ squadclass).append('<div ><h3 ><a href="#content" id="' + playerId + '" onclick="markActiveLink(this);graph(\'' + matches +'\',\'' + player + '\');" >'+sqadplayer[1]+'</a></h3></div>');
+			$('.'+ squadclass).append('<div ><h3 ><a href="#content" id="' + playerId + '" onclick="markActiveLink(this,\'' + matches +'\',\'' + player + '\');" >'+sqadplayer[1]+'</a></h3></div>');
 			}
 
 //console.log(Players[matches][player]);
